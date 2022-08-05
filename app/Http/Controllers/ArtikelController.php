@@ -12,10 +12,7 @@ class ArtikelController extends Controller
 {
     //
 
-    public function index()
-    {
-      
-    }
+
 
     public function store(Request $request)
     {
