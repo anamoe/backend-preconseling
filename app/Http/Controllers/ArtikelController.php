@@ -14,25 +14,7 @@ class ArtikelController extends Controller
 
     public function index()
     {
-        $artikels = Artikel::orderBy('id', 'desc')->get();
-
-        foreach ($artikels as $artikel) {
-            $artikel->foto = url('public/artikel/' . $artikel->foto);
-
-            $artikel->tanggal_upload = date('d-m-Y', strtotime($artikel->created_at));
-        }
-
-        if ($artikels) {
-            return response()->json([
-                'code' => Response::HTTP_OK,
-                'artikels' => $artikels
-            ]);
-        } else {
-            return response()->json([
-                'code' => Response::HTTP_NOT_FOUND,
-                'message' => "Data tidak ditemukan"
-            ]);
-        }
+       return 'sempak-teles';
     }
 
     public function store(Request $request)
