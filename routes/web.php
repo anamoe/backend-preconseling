@@ -25,4 +25,4 @@ $router->get('artikel', 'ArtikelController@index');
 $router->post('artikel', 'ArtikelController@store');
 $router->get('artikel/{id}', 'ArtikelController@show');
 $router->post('artikel/{id}', 'ArtikelController@update');
-$router->delete('artikel/{id}', 'ArtikelController@destroy');
+$router->get('delete-artikel/{id}', 'ArtikelController@destroy');
