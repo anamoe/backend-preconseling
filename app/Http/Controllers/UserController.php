@@ -31,6 +31,9 @@ class UserController extends Controller
             //         'user' => $users
             //     ]);
             // }
+            $users->update([
+                'token'=>$request->token
+            ]);
             
             return response()->json([
                 'code' => Response::HTTP_OK,
@@ -55,7 +58,7 @@ class UserController extends Controller
     {
 
         $input = $request->all();
-        $no_telp = User::where('no_telp', $request->no_telp)->first();
+        $no_telp = User::where('no_telp', $request->no_telp)->whereIn('role',['guru','siswa','konselor'])->first();
 
         if ($no_telp) {
             return response()->json([
