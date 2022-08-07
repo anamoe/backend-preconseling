@@ -24,25 +24,31 @@ class UserController extends Controller
 
 
         if ($users) {
-            if (password_verify($request->password, $users->password)) {
+            // if (password_verify($request->password, $users->password)) {
 
-                return response()->json([
-                    'code' => Response::HTTP_OK,
-                    'user' => $users
-                ]);
-            }
-
+            //     return response()->json([
+            //         'code' => Response::HTTP_OK,
+            //         'user' => $users
+            //     ]);
+            // }
+            
             return response()->json([
-                'code' => Response::HTTP_NOT_FOUND,
-                'message' => "Kata sandi salah",
+                'code' => Response::HTTP_OK,
+                'user' => $users
             ]);
+
+            // return response()->json([
+            //     'code' => Response::HTTP_NOT_FOUND,
+            //     'message' => "Kata sandi salah",
+            // ]);
            
-        }
+        }else{
 
         return response()->json([
             'code' =>Response::HTTP_NOT_FOUND,
             'message' => "No. Telepon tidak terdaftar",
         ]);
+    }
     }
 
     public function register(Request $request)
@@ -57,7 +63,7 @@ class UserController extends Controller
                 'message' => "No. Telepon sudah terdaftar",
             ]);
         } else {
-            $input['password'] = Hash::make($request->password);
+            // $input['password'] = Hash::make($request->password);
             $input['status'] = 'aktif';
             $user = User::create($input);
             return response()->json([
