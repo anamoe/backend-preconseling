@@ -91,7 +91,7 @@ public function edit_profile ($id,Request $request){
 
         // $req['password']= Hash::make($request->password);
 
-        $user->update();
+        $user->update($req);
         return response()->json([
             'code' => Response::HTTP_OK,
             'message' => "Sukses mengubah profil",
