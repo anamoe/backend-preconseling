@@ -9,6 +9,8 @@ use App\Models\User;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Notif;
+use PhpParser\Node\Expr\New_;
 
 class UserController extends Controller
 {
@@ -77,4 +79,39 @@ class UserController extends Controller
             ]);
         }
     }
+
+public function edit_profile ($id,Request $request){
+
+    $user = User::find($id);
+    $req = $request->all();
+
+
+
+    if ($user) {
+
+        // $req['password']= Hash::make($request->password);
+
+        $user->update();
+        return response()->json([
+            'code' => Response::HTTP_OK,
+            'message' => "Sukses mengubah profil",
+            'user' => $user
+           
+        ]);
+    } else {
+
+       
+        return response()->json([
+            'code' => Response::HTTP_NOT_FOUND,
+            'message' => "Gagal mengubah profil",
+           
+           
+        ]);
+    }
+
+
+}
+
+
+   
 }

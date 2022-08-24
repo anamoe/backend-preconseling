@@ -26,3 +26,5 @@ $router->post('artikel', 'ArtikelController@store');
 $router->get('artikel/{id}', 'ArtikelController@show');
 $router->post('artikel/{id}', 'ArtikelController@update');
 $router->get('delete-artikel/{id}', 'ArtikelController@destroy');
+$router->post('notif', 'UserController@chat_notif');
+$router->post('update-profil/{id}', 'UserController@edit_profile');
