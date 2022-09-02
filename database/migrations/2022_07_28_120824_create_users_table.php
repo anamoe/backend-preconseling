@@ -29,38 +29,38 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        User::create([
-            'id'=>'1',
-            'nama' => 'Siswa',
-            'no_telp' => '083434567890',
-            'password' => Hash::make('123456'),
-            'jenis_kelamin' => 'Laki-laki',
-            'usia' => '17',
-            'asal_sekolah' => 'SMA',
-            'status' => 'Aktif',
-            'role' => 'siswa'
-        ]);
+        // User::create([
+        //     'id'=>'1',
+        //     'nama' => 'Siswa',
+        //     'no_telp' => '083434567890',
+        //     'password' => Hash::make('123456'),
+        //     'jenis_kelamin' => 'Laki-laki',
+        //     'usia' => '17',
+        //     'asal_sekolah' => 'SMA',
+        //     'status' => 'Aktif',
+        //     'role' => 'siswa'
+        // ]);
 
-        User::create([
-            'id'=>'2',
-            'nama' => 'Konselor',
-            'no_telp' => '08523456711',
-            'password' => Hash::make('123456'),
-            'jenis_kelamin' => 'Laki-laki',
-            'usia' => '17',
-            'status' => 'Aktif',
-            'role' => 'konselor'
-        ]);
+        // User::create([
+        //     'id'=>'2',
+        //     'nama' => 'Konselor',
+        //     'no_telp' => '08523456711',
+        //     'password' => Hash::make('123456'),
+        //     'jenis_kelamin' => 'Laki-laki',
+        //     'usia' => '17',
+        //     'status' => 'Aktif',
+        //     'role' => 'konselor'
+        // ]);
 
-        User::create([
-            'id'=>'3',
-            'nama' => 'Guru',
-            'no_telp' => '081',
-            'password' =>  Hash::make('123456'),
-            'jenis_kelamin' => 'Laki-laki',
-            'status' => 'Aktif',
-            'role' => 'guru'
-        ]);
+        // User::create([
+        //     'id'=>'3',
+        //     'nama' => 'Guru',
+        //     'no_telp' => '081',
+        //     'password' =>  Hash::make('123456'),
+        //     'jenis_kelamin' => 'Laki-laki',
+        //     'status' => 'Aktif',
+        //     'role' => 'guru'
+        // ]);
        
     }
 
