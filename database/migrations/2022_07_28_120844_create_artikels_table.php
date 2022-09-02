@@ -47,7 +47,7 @@ class CreateArtikelsTable extends Migration
             Tulis opini Anda seputar isu terkini di Kompasiana.com',
             'link_youtube' => 'SMA',
             'link_worksheet' => 'https://docs.google.com/forms/d/10QlL7HUF_10G24oXj0ef-IAwpuXW-5V22eau8DsRs3Q/edit?usp=forms_home&ths=true',
-            'guru_id' => '3'
+            // 'guru_id' => '3'
         ]);
 
         Artikel::create([
@@ -70,7 +70,7 @@ class CreateArtikelsTable extends Migration
             Tulis opini Anda seputar isu terkini di Kompasiana.com',
             'link_youtube' => 'SMA',
             'link_worksheet' => 'https://docs.google.com/forms/d/10QlL7HUF_10G24oXj0ef-IAwpuXW-5V22eau8DsRs3Q/edit?usp=forms_home&ths=true',
-            'guru_id' => '3'
+            // 'guru_id' => '3'
         ]);
 
 
