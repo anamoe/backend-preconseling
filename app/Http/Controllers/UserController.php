@@ -33,9 +33,9 @@ class UserController extends Controller
             //         'user' => $users
             //     ]);
             // }
-            $users->update([
-                'token'=>$request->token
-            ]);
+            // $users->update([
+            //     'token'=>$request->token
+            // ]);
             
             return response()->json([
                 'code' => Response::HTTP_OK,
